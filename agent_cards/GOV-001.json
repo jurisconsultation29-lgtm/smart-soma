@@ -1,0 +1,28 @@
+{
+  "id": "GOV-001",
+  "name": "Agent e-Gov : recevabilité d'un dossier",
+  "sector": "egov",
+  "version": "1.0.0",
+  "versions_published": [
+    "1.0.0"
+  ],
+  "role": "Aide à instruire un dossier : pièces, identité, cas sensible, similarité.",
+  "business_owner": "Responsable métier du secteur (à nommer)",
+  "technical_owner": "Équipe data et IA de l'établissement",
+  "tools": [
+    "Règles métier locales"
+  ],
+  "limits": [
+    "Aide à la décision uniquement : validation humaine obligatoire.",
+    "Seuils illustratifs, à calibrer et valider par des experts du secteur.",
+    "Aucune donnée d'identité n'est journalisée.",
+    "Les cas sensibles (dérogation, bourse, handicap) exigent une étude humaine."
+  ],
+  "guardrails": [
+    "Validation stricte des entrées",
+    "Correlation ID",
+    "Journal d'audit chaîné",
+    "Kill switch"
+  ],
+  "next_review": "2027-01-31"
+}

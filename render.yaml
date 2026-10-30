@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: multiagent-secteurs
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    autoDeploy: false            # le déploiement est déclenché par la CI (Deploy Hook)
+    envVars:
+      - key: AGENT_API_KEY
+        generateValue: true
+      - key: ADMIN_TOKEN
+        generateValue: true
+      - key: NEXT_REVIEW
+        value: "2027-01-31"
+      - key: OWNER_BUSINESS
+        sync: false
+      - key: GITHUB_SYNC
+        value: "0"

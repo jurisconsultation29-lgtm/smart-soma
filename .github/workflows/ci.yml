@@ -1,0 +1,42 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12", cache: pip, cache-dependency-path: requirements-dev.txt }
+      - run: pip install -r requirements-dev.txt
+      - name: Tests automatisés
+        run: python -m pytest -q
+
+  docker:
+    needs: tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Construire l'image
+        run: docker build -t multiagent-secteurs .
+      - name: Démarrer le conteneur et tester /health
+        run: |
+          docker run -d --name api -p 8001:8001 -e PORT=8001 \
+            -e AGENT_API_KEY=ci-key-1234567890abcd -e ADMIN_TOKEN=ci-admin-1234567890abc multiagent-secteurs
+          for i in $(seq 1 20); do curl -fsS http://localhost:8001/health && break || sleep 2; done
+          curl -fsS http://localhost:8001/health
+          docker rm -f api
+
+  deploy:
+    needs: docker
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Déclencher le déploiement Render (si le secret existe)
+        env:
+          HOOK: ${{ secrets.RENDER_DEPLOY_HOOK }}
+        run: |
+          if [ -z "$HOOK" ]; then echo "RENDER_DEPLOY_HOOK absent : déploiement ignoré."; else curl -fsS -X POST "$HOOK"; fi

@@ -1,0 +1,27 @@
+{
+  "id": "ENE-001",
+  "name": "Agent Énergie : stabilité du réseau",
+  "sector": "energie",
+  "version": "1.0.0",
+  "versions_published": [
+    "1.0.0"
+  ],
+  "role": "Évalue la stabilité du réseau : charge, fréquence, écart de tension.",
+  "business_owner": "Responsable métier du secteur (à nommer)",
+  "technical_owner": "Équipe data et IA de l'établissement",
+  "tools": [
+    "Règles métier locales"
+  ],
+  "limits": [
+    "Aide à la décision uniquement : validation humaine obligatoire.",
+    "Seuils illustratifs, à calibrer et valider par des experts du secteur.",
+    "Aucune donnée d'identité n'est journalisée."
+  ],
+  "guardrails": [
+    "Validation stricte des entrées",
+    "Correlation ID",
+    "Journal d'audit chaîné",
+    "Kill switch"
+  ],
+  "next_review": "2027-01-31"
+}

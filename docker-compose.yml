@@ -1,0 +1,11 @@
+services:
+  api:
+    build: .
+    ports: ["8001:8001"]
+    env_file: .env                 # secrets hors du dépôt (.env est ignoré par git)
+    environment:
+      PORT: "8001"
+    volumes: ["agent-data:/app/data"]
+    restart: unless-stopped
+volumes:
+  agent-data:

@@ -1,0 +1,15 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    { "label": "🤖 Bienvenue", "type": "shell", "command": "python robot.py --hello",
+      "presentation": { "panel": "dedicated", "reveal": "always" }, "runOptions": { "runOn": "folderOpen" }, "problemMatcher": [] },
+    { "label": "🤖 Parler au robot", "type": "shell", "command": "python robot.py",
+      "presentation": { "panel": "dedicated", "focus": true }, "problemMatcher": [] },
+    { "label": "🤖 Lancer les tests", "type": "shell", "command": "python -m pytest -q",
+      "group": "test", "presentation": { "panel": "dedicated" }, "problemMatcher": [] },
+    { "label": "🤖 Démarrer l'API", "type": "shell", "command": "python -m uvicorn app.main:app --port 8001 --reload",
+      "options": { "env": { "ALLOW_INSECURE_DEV": "1" } }, "isBackground": true, "presentation": { "panel": "dedicated" }, "problemMatcher": [] },
+    { "label": "🤖 Docker : construire et lancer", "type": "shell", "command": "docker compose up --build",
+      "presentation": { "panel": "dedicated" }, "problemMatcher": [] }
+  ]
+}

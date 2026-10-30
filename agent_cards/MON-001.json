@@ -1,0 +1,25 @@
+{
+  "id": "MON-001",
+  "name": "Agent Monitoring : observabilité des agents",
+  "sector": "monitoring",
+  "version": "1.0.0",
+  "versions_published": [
+    "1.0.0"
+  ],
+  "role": "Surveille taux d'erreur et latence de tous les agents, déclenche les alertes et recommande l'action du runbook.",
+  "business_owner": "Responsable métier du secteur (à nommer)",
+  "technical_owner": "Équipe data et IA de l'établissement",
+  "tools": [
+    "Monitor (métriques en mémoire)",
+    "Journal d'audit"
+  ],
+  "limits": [
+    "Ne corrige rien seul : propose une étape du runbook.",
+    "Métriques en mémoire : perdues au redémarrage."
+  ],
+  "guardrails": [
+    "Aucune donnée métier lue",
+    "Seuils configurables (LATENCY_ALERT_MS)"
+  ],
+  "next_review": "2027-01-31"
+}
