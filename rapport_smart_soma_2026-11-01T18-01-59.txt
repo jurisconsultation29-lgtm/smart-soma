@@ -1,0 +1,24 @@
+======================================================
+ SMARTSOMA - RAPPORT DE CONSULTATION PSYCHOSOMATIQUE
+ Dépôt GitHub : https://github.com/jurisconsultation29-lgtm/smart-soma
+======================================================
+Date : 11/1/2026, 6:01:59 PM
+Hôte : LAPTOP-EJ4ORKRR (win32)
+
+------------------------------------------------------
+DEMANDE DU PATIENT / SYMPTÔME :
+"j ai mal au dos"
+------------------------------------------------------
+
+ANALYSE ET PISTES DE RÉFLEXION :
+📖 **« Dis-moi où tu as mal, je te dirai pourquoi » (SmartSoma)**
+
+▪ **Zone : Dos**
+• *Symbolique :* Le soutien matériel/affectif, les insécurités financières et la charge excessive.
+• *Pistes de réflexion :*
+  - Sentez-vous que vous portez tout tout(e) seul(e) ?
+  - Avez-vous peur de manquer de soutien dans vos démarches ?
+
+Autres explications : causes médicales ou mécaniques, posture, fatigue, sommeil, médicaments. Si la gêne persiste, consultez un médecin.
+
+======================================================
