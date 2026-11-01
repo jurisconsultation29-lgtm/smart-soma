@@ -1,0 +1,24 @@
+======================================================
+ SMARTSOMA - RAPPORT DE CONSULTATION PSYCHOSOMATIQUE
+ Dépôt GitHub : https://github.com/jurisconsultation29-lgtm/smart-soma
+======================================================
+Date : 11/1/2026, 6:16:03 PM
+Hôte : LAPTOP-EJ4ORKRR (win32)
+
+------------------------------------------------------
+DEMANDE DU PATIENT / SYMPTÔME :
+"la gorge"
+------------------------------------------------------
+
+ANALYSE ET PISTES DE RÉFLEXION :
+📖 **« Dis-moi où tu as mal, je te dirai pourquoi » (SmartSoma)**
+
+▪ **Zone : Gorge / Voix**
+• *Symbolique :* L'expression de soi, les vérités retenues et la créativité bloquée.
+• *Pistes de réflexion :*
+  - Qu'avez-vous ravalé sans réussir à l'exprimer ?
+  - Avez-vous peur d'affirmer votre pensée ?
+
+Autres explications : causes médicales ou mécaniques, posture, fatigue, sommeil, médicaments. Si la gêne persiste, consultez un médecin.
+
+======================================================
